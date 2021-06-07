@@ -20,6 +20,7 @@ function sendEmail(event) {
     fetch('http://localhost:8081/send-email', req_params)
         .then(res => {
             if (res.ok) {
+                resetInputFleids(inputFields);
                 Toast.show('Email sent!', 'success');
                 return res.json();
             } else {
@@ -31,4 +32,10 @@ function sendEmail(event) {
             Toast.show('An error occurred', 'error');
             console.error(err);
         });
+}
+
+function resetInputFleids(inputFields) {
+    for (let i = 0; i < inputFields.length; i++) {
+        inputFields[i].value = "";
+    }
 }
