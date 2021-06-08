@@ -21,7 +21,7 @@ function sendEmail(event) {
         .then(res => {
             if (res.ok) {
                 resetInputFleids(inputFields);
-                Toast.show('Email sent!', 'success');
+                Toast.show('Thank you for contacting!', 'success');
                 return res.json();
             } else {
                 Toast.show('An error occurred', 'error');
