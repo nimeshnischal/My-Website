@@ -17,7 +17,7 @@ function sendEmail(event) {
         emailData[inputFields[i].name] = inputFields[i].value;
     }
     req_params.body = JSON.stringify(emailData);
-    fetch('http://localhost:8081/send-email', req_params)
+    fetch('https://nimesh-website.herokuapp.com/send-email', req_params)
         .then(res => {
             if (res.ok) {
                 resetInputFleids(inputFields);
