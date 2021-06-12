@@ -17,8 +17,10 @@ function sendEmail(event) {
         emailData[inputFields[i].name] = inputFields[i].value;
     }
     req_params.body = JSON.stringify(emailData);
+    Loader.show();
     fetch('https://nimesh-website.herokuapp.com/send-email', req_params)
         .then(res => {
+            Loader.hide();
             if (res.ok) {
                 resetInputFleids(inputFields);
                 Toast.show('Thank you for contacting!', 'success');
@@ -29,6 +31,7 @@ function sendEmail(event) {
             }
         })
         .catch(err => {
+            Loader.hide();
             Toast.show('An error occurred', 'error');
             console.error(err);
         });

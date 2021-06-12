@@ -1,0 +1,42 @@
+:root {
+    --mainText: black;
+    --borderColor: #c1c1c1;
+}
+
+.loader {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, right 0.2s, visibility 0.2s;
+}
+
+.loader::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+
+    border: 7px solid var(--borderColor);
+    border-top-color: var(--mainText);
+    border-radius: 50%;
+
+    animation: loader 1.5s ease-in-out infinite;
+}
+
+.loader--visible {
+    right: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes loader { 
+    to {
+        transform: rotate(1turn);
+    }
+}
