@@ -9,7 +9,7 @@
 
     --themeDotBorder: #24292e;
 
-    --previewBg: rgb(251, 249, 243, 0.8);
+    --previewBg: rgb(251, 249, 243, 0.7);
     --previewShadow: #f0ead6;
 
     --btnColor: black;
@@ -106,7 +106,7 @@ h6 { font-size: 16px; }
 
 #navigation {
     margin: 01;
-    padding: 10px;
+    padding-right: 10px;
 }
 
 #navigation a {
@@ -313,18 +313,18 @@ h6 { font-size: 16px; }
 }
 
 .post-preview {
-    background-color: #fff;
+    background-color: var(--secondaryColor);
     padding: 15px;
     min-height: 125px
 }
 
 .post-title {
-    color: black;
+    color: var(--mainText);
     margin: 0;
 }
 
 .post-intro {
-    color: #4b5156;
+    color: var(--secondaryText);
     font-size: 14px;
 }
 
